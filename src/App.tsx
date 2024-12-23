@@ -1,7 +1,8 @@
 import "./App.css";
+import AllTodos from "./pages/all-todos";
 
 function App() {
-  return <div>App</div>;
+  return <AllTodos/>;
 }
 
 export default App;
