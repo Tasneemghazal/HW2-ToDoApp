@@ -1,6 +1,7 @@
 export interface ITodo {
     title: string;
     urgent: boolean;
+    completed: boolean;
 }
 
 export interface FormProps{
@@ -17,4 +18,5 @@ export interface ToDoItemProps {
     data: string;
     onDelete: () => void;
     className?: string;
+    onComplete: () => void;
 }

@@ -4,7 +4,7 @@ import Input from "../input";
 import { FormComponent, InputContainer, Label} from "./Form.style";
 import { FormProps, ITodo} from "../../interfaces/ITodo";
 
-const initialState = {title: "", urgent: false}
+const initialState = {title: "", urgent: false, completed: false,}
 const Form:FC<FormProps> = ({allTodos, setAllTodos}) => {
   const [todo, setTodo] = useState<ITodo>(initialState);
 
