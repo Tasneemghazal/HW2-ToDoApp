@@ -7,6 +7,8 @@ export interface ITodo {
 export interface FormProps{
     allTodos: ITodo[];
     setAllTodos: React.Dispatch<React.SetStateAction<ITodo[]>>;
+    error:string;
+    setError: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface ToDoDataProps{
@@ -19,4 +21,5 @@ export interface ToDoItemProps {
     onDelete: () => void;
     className?: string;
     onComplete: () => void;
+    isCompleted: boolean;
 }

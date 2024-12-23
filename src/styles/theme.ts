@@ -5,6 +5,8 @@ export const theme = {
         lime_green: '#06D001',
         dark_lime_green: '#04A700',
         powder_blue: '#AAC4FF',
-        light_red: '#FF8383'
+        light_red: '#FF8383',
+        white: '#FFFFFF',
+        red: '#F00'
     }
 }

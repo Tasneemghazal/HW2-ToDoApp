@@ -16,3 +16,7 @@ export const InputContainer = styled.div`
 export const Label = styled.label`
     margin:5px 0 ;
 `;
+
+export const Error = styled.p`
+    color: ${theme.colors.red};
+`;

@@ -13,6 +13,13 @@ export const TodosData = styled.div`
     grid-template-columns: repeat(3,1fr);
 `;
 
+export const P = styled.p`
+    margin-left: 5px ;
+`;
+ 
 export const Box = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 

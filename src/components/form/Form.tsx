@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
 import Button from "../button";
 import Input from "../input";
-import { FormComponent, InputContainer, Label} from "./Form.style";
+import { FormComponent, InputContainer, Label, Error} from "./Form.style";
 import { FormProps, ITodo} from "../../interfaces/ITodo";
 
 const initialState = {title: "", urgent: false, completed: false,}
-const Form:FC<FormProps> = ({allTodos, setAllTodos}) => {
+const Form:FC<FormProps> = ({allTodos, setAllTodos, error, setError}) => {
   const [todo, setTodo] = useState<ITodo>(initialState);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,9 +15,14 @@ const Form:FC<FormProps> = ({allTodos, setAllTodos}) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(todo);
+    if (!todo.title.trim()) {
+      setError("Please enter your to-do");
+      return;
+    }else{
+      setError("");
+    }
     setAllTodos([...allTodos, todo]);
-    console.log(allTodos);
+    
   }
   return (
     <FormComponent onSubmit={handleSubmit}>
@@ -29,6 +34,7 @@ const Form:FC<FormProps> = ({allTodos, setAllTodos}) => {
         </Label>
       </InputContainer>
       <Button />
+      {error&& <Error>{error}</Error>}
     </FormComponent>
   );
 };
