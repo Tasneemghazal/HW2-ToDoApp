@@ -3,4 +3,6 @@ export interface IProps {
     name: string;
     placeholder?: string;
     checked?: boolean;
+    value?: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>)=>void;
 }

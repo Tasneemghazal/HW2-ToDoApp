@@ -8,4 +8,8 @@ export const TodoItemContainer = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+    
+    &.urgent{
+        background-color:${theme.colors.lime_green};
+    }
 `;
