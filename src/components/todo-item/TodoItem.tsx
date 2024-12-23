@@ -1,13 +1,15 @@
 import { FaTrashAlt } from "react-icons/fa";
 import { TodoItemContainer } from "./TodoItem.style";
 import { FaCircleCheck } from "react-icons/fa6";
+import { FC } from "react";
+import { ToDoItemProps } from "../../interfaces/ITodo";
 
-const TodoItem = () => {
+const TodoItem: FC<ToDoItemProps> = ({onDelete, data, className, onComplete}) => {
   return (
-    <TodoItemContainer>
-      <FaCircleCheck color="white" />
-      items
-      <FaTrashAlt color="red" />
+    <TodoItemContainer className={className}>
+      <FaCircleCheck color="white" onClick={onComplete} />
+      {data}
+      <FaTrashAlt color="red" onClick={onDelete} />
     </TodoItemContainer>
   );
 };
