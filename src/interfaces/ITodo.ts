@@ -23,3 +23,8 @@ export interface ToDoItemProps {
     onComplete: () => void;
     isCompleted: boolean;
 }
+
+export interface IAllTodos {
+    allTodos: ITodo[];
+    setAllTodos: React.Dispatch<React.SetStateAction<ITodo[]>>;
+}
