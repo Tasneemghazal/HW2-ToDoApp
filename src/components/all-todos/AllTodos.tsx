@@ -24,6 +24,7 @@ const AllTodos: FC<IAllTodos>= ({allTodos, setAllTodos}) => {
           className={todo.urgent ? "urgent" : ""}
           onComplete={() => handleComplete(index)}
           isCompleted={todo.completed}
+          key={index}
         />
       ))}
     </>
